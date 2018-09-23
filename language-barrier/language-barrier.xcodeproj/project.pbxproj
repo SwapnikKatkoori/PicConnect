@@ -14,6 +14,8 @@
 		10C47C2021576589002C789F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10C47C1F21576589002C789F /* Assets.xcassets */; };
 		10C47C2321576589002C789F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C47C2121576589002C789F /* LaunchScreen.storyboard */; };
 		10C47C2B2157720C002C789F /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 10C47C2A2157720B002C789F /* Inceptionv3.mlmodel */; };
+		10CF72582157D6080094ACB4 /* lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF72572157D6080094ACB4 /* lang.swift */; };
+		2C64B06B32831A0A8142354F /* Pods_language_barrier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3484B8BA38D6CA3AC82507 /* Pods_language_barrier.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		10C47C2221576589002C789F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10C47C2421576589002C789F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10C47C2A2157720B002C789F /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		10CF72572157D6080094ACB4 /* lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = lang.swift; path = "/Users/swapnikkatkoori1/Desktop/image-translator/language-barrier/language-barrier/lang.swift"; sourceTree = "<absolute>"; };
+		373DF250DB3700D0DF9B2FEA /* Pods-language-barrier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-language-barrier.debug.xcconfig"; path = "Pods/Target Support Files/Pods-language-barrier/Pods-language-barrier.debug.xcconfig"; sourceTree = "<group>"; };
+		5C6065CC727FB93563A03386 /* Pods-language-barrier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-language-barrier.release.xcconfig"; path = "Pods/Target Support Files/Pods-language-barrier/Pods-language-barrier.release.xcconfig"; sourceTree = "<group>"; };
+		EB3484B8BA38D6CA3AC82507 /* Pods_language_barrier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_language_barrier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C64B06B32831A0A8142354F /* Pods_language_barrier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +52,8 @@
 				10C47C2A2157720B002C789F /* Inceptionv3.mlmodel */,
 				10C47C1721576589002C789F /* language-barrier */,
 				10C47C1621576589002C789F /* Products */,
+				D917D9AA1B24507412E65A19 /* Pods */,
+				95A4668DA41FD54261EA081D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +68,7 @@
 		10C47C1721576589002C789F /* language-barrier */ = {
 			isa = PBXGroup;
 			children = (
+				10CF72572157D6080094ACB4 /* lang.swift */,
 				10298D0021578B4300C8007B /* ROGoogleTranslate.swift */,
 				10C47C1821576589002C789F /* AppDelegate.swift */,
 				10C47C1A21576589002C789F /* ViewController.swift */,
@@ -70,6 +80,23 @@
 			path = "language-barrier";
 			sourceTree = "<group>";
 		};
+		95A4668DA41FD54261EA081D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB3484B8BA38D6CA3AC82507 /* Pods_language_barrier.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D917D9AA1B24507412E65A19 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				373DF250DB3700D0DF9B2FEA /* Pods-language-barrier.debug.xcconfig */,
+				5C6065CC727FB93563A03386 /* Pods-language-barrier.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10C47C2721576589002C789F /* Build configuration list for PBXNativeTarget "language-barrier" */;
 			buildPhases = (
+				3DD1A7F6724FDC57068AC2C6 /* [CP] Check Pods Manifest.lock */,
 				10C47C1121576589002C789F /* Sources */,
 				10C47C1221576589002C789F /* Frameworks */,
 				10C47C1321576589002C789F /* Resources */,
+				C33BCD6B3A631321B7154D5E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,12 +165,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3DD1A7F6724FDC57068AC2C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-language-barrier-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C33BCD6B3A631321B7154D5E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-language-barrier/Pods-language-barrier-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ROGoogleTranslate/ROGoogleTranslate.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ROGoogleTranslate.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-language-barrier/Pods-language-barrier-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		10C47C1121576589002C789F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				10C47C1B21576589002C789F /* ViewController.swift in Sources */,
+				10CF72582157D6080094ACB4 /* lang.swift in Sources */,
 				10C47C2B2157720C002C789F /* Inceptionv3.mlmodel in Sources */,
 				10298D0121578B4300C8007B /* ROGoogleTranslate.swift in Sources */,
 				10C47C1921576589002C789F /* AppDelegate.swift in Sources */,
@@ -286,6 +355,7 @@
 		};
 		10C47C2821576589002C789F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 373DF250DB3700D0DF9B2FEA /* Pods-language-barrier.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +374,7 @@
 		};
 		10C47C2921576589002C789F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C6065CC727FB93563A03386 /* Pods-language-barrier.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

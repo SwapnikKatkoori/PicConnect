@@ -8,20 +8,36 @@
 
 import UIKit
 import CoreML
+var result1=""
 class ViewController: UIViewController,  UINavigationControllerDelegate {
+    
     var params = ROGoogleTranslateParams(source: "en",
                                          target: "de",
-                                         text:   "Here you can add your sentence you want to be translated")
+                                         text:   "")
+    var langCurrently="en"
+
+    
+    
+    var langToBe = "Spanish"
 
 
-    let translator = ROGoogleTranslate(with:"3d084685aea31de9dfdcb0069f4f88362fde6af6")
+
+    let translator = ROGoogleTranslate(with:"AIzaSyCPKW1DlP3lHDQPsPrEEawO2E6Y3UAEfR0")
     
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     
+    @IBOutlet weak var label2: UILabel!
     override func viewDidLoad() {
-
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "lang")
+        self.present(controller, animated: true, completion: nil)
+        
+        translator.translate(params: params) { (result) in
+            print("Translation: \(result)")
+            result1=result
+        }
        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -59,11 +75,19 @@ class ViewController: UIViewController,  UINavigationControllerDelegate {
         present(picker, animated: true)
     }
     
+    func translationFunction(){
+        translator.translate(params: params) { (result) in
+            print("Translation: \(result)")
+            result1=result
+        }
+    }
+    
     
     
 
 
 }
+
 extension ViewController: UIImagePickerControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
@@ -105,9 +129,12 @@ extension ViewController: UIImagePickerControllerDelegate {
         guard let prediction = try? model.prediction(image: pixelBuffer!) else {
             return
         }
+        params.text=prediction.classLabel
+        translationFunction()
         
+        label.text = "\(prediction.classLabel) in \("English")"
+        label2.text="In \(langToBe) that is \(result1)"
         
-        label.text = "I think this is a \(prediction.classLabel)."
         
         
         

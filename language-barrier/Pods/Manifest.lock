@@ -1,0 +1,16 @@
+PODS:
+  - ROGoogleTranslate (0.0.5)
+
+DEPENDENCIES:
+  - ROGoogleTranslate
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ROGoogleTranslate
+
+SPEC CHECKSUMS:
+  ROGoogleTranslate: 344d579487c21af1ae54138baa68605b861ba84e
+
+PODFILE CHECKSUM: 71e3922337ad1bfef7073417e2bd88d34f72a374
+
+COCOAPODS: 1.5.3
