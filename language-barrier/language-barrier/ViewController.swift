@@ -22,7 +22,7 @@ class ViewController: UIViewController,  UINavigationControllerDelegate {
 
 
 
-    let translator = ROGoogleTranslate(with:"AIzaSyCPKW1DlP3lHDQPsPrEEawO2E6Y3UAEfR0")
+    let translator = ROGoogleTranslate(with:"API_Key")
     
 
     @IBOutlet weak var imageView: UIImageView!
